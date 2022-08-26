@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug learn_clouser (learn_clouser)",
+            "program": "${workspaceFolder:swift_projects}/learn_clouser/.build/debug/learn_clouser",
+            "args": [],
+            "cwd": "${workspaceFolder:swift_projects}/learn_clouser",
+            "preLaunchTask": "swift: Build Debug learn_clouser (learn_clouser)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release learn_clouser (learn_clouser)",
+            "program": "${workspaceFolder:swift_projects}/learn_clouser/.build/release/learn_clouser",
+            "args": [],
+            "cwd": "${workspaceFolder:swift_projects}/learn_clouser",
+            "preLaunchTask": "swift: Build Release learn_clouser (learn_clouser)"
+        }
+    ]
+}
