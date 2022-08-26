@@ -1,0 +1,43 @@
+syntax = "proto3";
+//package snazzy.items;
+message BookInfo {
+   int64 id = 1;
+   string title = 2;
+   string author = 3;
+}
+message Requests{
+   oneof request_oneof{
+     AppRequest app_request=1;
+   }
+ } 
+ message AppRequest{
+   
+   uint32 ref_id =1;
+   MetaData metadata =2;
+   string resource_list=3;
+ }
+ message AppRequest2{
+   message MetaData2{
+     oneof code_or_url_oneof2{
+       string Path=1;
+       string Url=2;
+     }  
+     string external_dependencies =3;
+     string internal_dependencies = 4;
+     string external_flow =5;
+     string internal_flow=6;
+   }
+   uint32 ref_id =1;
+   string resource_list=3;
+ }
+ message MetaData{
+   //CodeOrURL code_or_url =1;
+   oneof code_or_url_oneof{
+     string Path=1;
+     string Url=2;
+   }
+   string external_dependencies =3;
+   string internal_dependencies = 4;
+   string external_flow =5;
+   string internal_flow=6;
+ }
